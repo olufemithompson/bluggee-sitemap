@@ -114,7 +114,7 @@ public class Application {
 	public void run(){
 		try {
 			List<String> links = Content.getContacts(dbConnection);
-			writeUrl(links,1.0, ChangeFreq.YEARLY);
+			writeUrl(links,1.0, ChangeFreq.DAILY);
 			
 		
 			wsg.write();

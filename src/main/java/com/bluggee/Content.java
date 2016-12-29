@@ -121,7 +121,7 @@ public class Content extends DBObject{
 		dbConnection = getDBConnection(connection);
 		Statement statement = dbConnection.createStatement();
 
-		ResultSet rs = statement.executeQuery("select id, url from content where sitemap_completed is null or sitemap_completed = 0");
+		ResultSet rs = statement.executeQuery("select id, url from content");
 		while (rs.next()) {
 			links.add( rs.getString("url"));
 			complete(connection, rs.getInt("id"));
