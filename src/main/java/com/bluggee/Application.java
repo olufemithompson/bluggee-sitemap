@@ -114,12 +114,11 @@ public class Application {
 	public void run(){
 		try {
 			List<String> links = Content.getContacts(dbConnection);
-			for(int i = 0; i < 1000; i++){
-				writeUrl(links,1.0, ChangeFreq.YEARLY);
-			}
+			writeUrl(links,1.0, ChangeFreq.YEARLY);
+			
 		
 			wsg.write();
-			if(links.size() * 1000 > 50000){
+			if(links.size()  > 50000){
 				wsg.writeSitemapsWithIndex();
 			}
 		
