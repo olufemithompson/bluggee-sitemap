@@ -216,7 +216,7 @@ abstract class SitemapGenerator<U extends ISitemapUrl, THIS extends SitemapGener
 		File outFile = new File(baseDir, "sitemap.xml");
 		SitemapIndexGenerator sig;		
 		sig = new SitemapIndexGenerator.Options(baseUrl, outFile).dateFormat(dateFormat).autoValidate(autoValidate).build();		
-		sig.addUrls("sitemap/"+fileNamePrefix, fileNameSuffix, mapCount).write();
+		sig.addUrls(fileNamePrefix, fileNameSuffix, mapCount).write();
 	}
 	
 	private void writeSiteMap() {
